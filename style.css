@@ -27,6 +27,29 @@ body {
   border-radius: 1.5rem;
 }
 
+.bg-images {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.bg-pattern {
+  position: absolute;
+  left: 0%;
+  width: 776px;
+}
+
+.bg-illustration {
+  position: absolute;
+}
+
+h1 {
+  font-weight: 700;
+  color: hsl(238deg, 29%, 16%);
+}
+
 .accordion {
   min-width: 17.5rem;
   margin-top: 1rem;
@@ -44,7 +67,6 @@ body {
 }
 .accordion .item .label {
   cursor: pointer;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,15 +74,26 @@ body {
 .accordion .item .label h2 {
   display: inline;
   margin: 0;
+  font-weight: 400;
+  color: hsl(237deg, 12%, 33%);
 }
 .accordion .item .label img {
   width: 0.75rem;
+  translate: transform 0, 1s ease;
 }
 .accordion .item .content {
   display: block;
   overflow: hidden;
   margin-top: 1rem;
   max-height: 0;
-  transition: max-height 0.25s ease;
+  transition: max-height 0.3s ease;
   font-size: 1rem;
+  color: hsl(240deg, 6%, 50%);
+}
+.accordion .item.active .label h2 {
+  font-weight: 700;
+  color: hsl(238deg, 29%, 16%);
+}
+.accordion .item.active .label img {
+  transform: rotate(180deg);
 }/*# sourceMappingURL=style.css.map */

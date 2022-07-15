@@ -30,6 +30,29 @@ body {
     border-radius: 1.5rem; // 24px
 }
 
+.bg-images {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bg-pattern {
+    position: absolute;
+    left: 0%;
+    width: 388px * 2;
+}
+
+.bg-illustration {
+    position: absolute;
+}
+
+h1 {
+    font-weight: 700;
+    color: $very-dark-desaturated-blue;
+}
+
 .accordion {
     min-width: 17.5rem; // 280px
 
@@ -51,7 +74,6 @@ body {
 
         .label {
             cursor: pointer;
-            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -59,10 +81,14 @@ body {
             h2 {
                 display: inline;
                 margin: 0;
+
+                font-weight: 400;
+                color: $very-dark-grayish-blue;
             }
-            
+
             img {
                 width: 0.75rem;
+                translate: transform 0, 1s ease;
             }
         }
 
@@ -72,9 +98,23 @@ body {
             margin-top: 1rem;
 
             max-height: 0;
-            transition: max-height 0.25s ease;
+            transition: max-height 0.3s ease;
 
             font-size: 1rem;
+            color: $dark-grayish-blue;
+        }
+
+        &.active {
+            .label {
+                h2 {
+                    font-weight: 700;
+                    color: $very-dark-desaturated-blue;
+                }
+
+                img {
+                    transform: rotate(180deg);
+                }
+            }
         }
     }
 }
