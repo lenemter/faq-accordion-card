@@ -11,9 +11,9 @@ function close_all(exception) {
 
 const accordion_items = document.querySelectorAll(".accordion > .item");
 for (const item of accordion_items) {
-    item.onclick = () => {
-        const content = item.querySelector(".content");
-
+    const label = item.querySelector(".label");
+    const content = item.querySelector(".content");
+    label.onclick = () => {
         close_all(exception = item);
         item.classList.toggle("active")
 
