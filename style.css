@@ -1,0 +1,66 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background: linear-gradient(hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-card {
+  display: flex;
+  flex-basis: 57.5rem;
+  background: hsl(0deg, 0%, 100%);
+  border-radius: 1.5rem;
+}
+
+.accordion {
+  min-width: 17.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.accordion hr {
+  margin: 0;
+  height: 1px;
+  border: none;
+  color: hsl(240deg, 5%, 91%);
+  background: hsl(240deg, 5%, 91%);
+}
+.accordion .item {
+  margin: 1.5rem;
+}
+.accordion .item .label {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion .item .label h2 {
+  display: inline;
+  margin: 0;
+}
+.accordion .item .label img {
+  width: 0.75rem;
+}
+.accordion .item .content {
+  display: block;
+  overflow: hidden;
+  margin-top: 1rem;
+  max-height: 0;
+  transition: max-height 0.25s ease;
+  font-size: 1rem;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,80 @@
+@import "variables";
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font;
+    background: linear-gradient($soft-violet, $soft-blue);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-card {
+    display: flex;
+    flex-basis: 57.5rem; // 920px
+
+    background: $white;
+    border-radius: 1.5rem; // 24px
+}
+
+.accordion {
+    min-width: 17.5rem; // 280px
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    // padding: 45px 45px;
+
+    hr {
+        margin: 0;
+
+        height: 1px;
+        border: none;
+        color: $light-grayish-blue; // IE
+        background: $light-grayish-blue; // Modern browsers
+    }
+
+    .item {
+        margin: 1.5rem;
+
+        .label {
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h2 {
+                display: inline;
+                margin: 0;
+            }
+            
+            img {
+                width: 0.75rem;
+            }
+        }
+
+        .content {
+            display: block;
+            overflow: hidden;
+            margin-top: 1rem;
+
+            max-height: 0;
+            transition: max-height 0.25s ease;
+
+            font-size: 1rem;
+        }
+    }
+}
